@@ -21,13 +21,13 @@ def exploreStargazers(graph, repo, repository_url):
         user_IRI = URIRef(user.html_url)
         if user.name != None:
             user_name = Literal(user.name, datatype=XSD.string)
-            graph.add((user_IRI, SCHEMA.name, user_name))
+            graph.add( (user_IRI, SCHEMA.name, user_name) )
         user_identifier = Literal(user.id, datatype=XSD.int)
         user_avatar = URIRef(user.avatar_url)
-        graph.add((user_IRI, SCHEMA.identifier, user_identifier))
-        graph.add((user_IRI, RDF.type, WD.Q20374321))  # the stargazer is GitHub user
-        graph.add((user_IRI, SCHEMA.image, user_avatar))
-        graph.add((user_IRI, SCHEMA.BookmarkAction, repository_url))
+        graph.add( (user_IRI, SCHEMA.identifier, user_identifier) )
+        graph.add( (user_IRI, RDF.type, WD.Q20374321) )  # the stargazer is GitHub user
+        graph.add( (user_IRI, SCHEMA.image, user_avatar) )
+        graph.add( (user_IRI, SCHEMA.BookmarkAction, repository_url) )
 
 def exploreContributors(graph, repo, repository_url):
     for contributor in repo.get_contributors():
@@ -35,15 +35,15 @@ def exploreContributors(graph, repo, repository_url):
         user_IRI = URIRef(user.html_url)
         if user.name != None:
             user_name = Literal(user.name, datatype=XSD.string)
-            graph.add((user_IRI, SCHEMA.name, user_name))
+            graph.add( (user_IRI, SCHEMA.name, user_name) )
         user_identifier = Literal(user.id, datatype=XSD.int)
         user_avatar = URIRef(user.avatar_url)
-        graph.add((user_IRI, SCHEMA.identifier, user_identifier))
-        graph.add((user_IRI, RDF.type, WD.Q20374321))  # the contributor is GitHub user
-        graph.add((user_IRI, SCHEMA.image, user_avatar))
-        graph.add((user_IRI, RDF.type, WD.Q20204892))
-        graph.add((user_IRI, SCHEMA.contributor, repository_url))
-        graph.add((user_IRI, WDPROPERTY.P3919, repository_url)) #contributed to (wikidata property)
+        graph.add( (user_IRI, SCHEMA.identifier, user_identifier))
+        graph.add( (user_IRI, RDF.type, WD.Q20374321) )  # the contributor is GitHub user
+        graph.add( (user_IRI, SCHEMA.image, user_avatar) )
+        graph.add( (user_IRI, RDF.type, WD.Q20204892) )
+        graph.add( (user_IRI, SCHEMA.contributor, repository_url) )
+        graph.add( (user_IRI, WDPROPERTY.P3919, repository_url) ) #contributed to (wikidata property)
 
 def metricsRepo(graph, repo):
     print(0)
@@ -67,14 +67,14 @@ for repo in repositories:
         ProgrammingLanguage = Literal(repo.language, datatype=XSD.string)
         graph.add((repository_url, SCHEMA.programmingLanguage, ProgrammingLanguage))
 
-    graph.add( (repository_url, RDF.type, WDPROPERTY.P1324  ) ) #The repository is a (wikidata) source code repository type
-    graph.add((repository_url, RDF.type, SCHEMA.SoftwareSourceCode)) #The repository is a (schema.org) SoftwareSourceCode type
-    graph.add((repository_url, SCHEMA.identifier, repo_id)) #id of the repository as an integer
-    graph.add((repository_url, SCHEMA.codeRepository, repository_url))
-    graph.add((repository_url, SCHEMA.dateCreated, dateCreated))
-    graph.add((repository_url, SCHEMA.dateModified, dateModified))
-    graph.add((repository_url, SCHEMA.name, schema_name))
-    graph.add((repository_url, SCHEMA.description, description))
+    graph.add( (repository_url, RDF.type, WDPROPERTY.P1324) ) #The repository is a (wikidata) source code repository type
+    graph.add( (repository_url, RDF.type, SCHEMA.SoftwareSourceCode) ) #The repository is a (schema.org) SoftwareSourceCode type
+    graph.add( (repository_url, SCHEMA.identifier, repo_id) ) #id of the repository as an integer
+    graph.add( (repository_url, SCHEMA.codeRepository, repository_url) )
+    graph.add( (repository_url, SCHEMA.dateCreated, dateCreated) )
+    graph.add( (repository_url, SCHEMA.dateModified, dateModified) )
+    graph.add( (repository_url, SCHEMA.name, schema_name) )
+    graph.add( (repository_url, SCHEMA.description, description) )
 
     exploreStargazers(graph, repo, repository_url) #Add triples about stargazers
     exploreContributors(graph, repo, repository_url) #Add triples about contributors
@@ -85,11 +85,11 @@ for repo in repositories:
     owner = URIRef(repo.owner.html_url)
     owner_avatar = URIRef(repo.owner.avatar_url)
 
-    graph.add((repository_url, SCHEMA.author, owner))
-    graph.add((owner, SCHEMA.identifier, owner_identifier))
-    graph.add((owner, RDF.type, WD.Q20374321)) #the owner is GitHub user
-    graph.add((owner, SCHEMA.name, owner_name))
-    graph.add((owner, SCHEMA.image, owner_avatar))
+    graph.add( (repository_url, SCHEMA.author, owner) )
+    graph.add( (owner, SCHEMA.identifier, owner_identifier) )
+    graph.add( (owner, RDF.type, WD.Q20374321) ) #the owner is GitHub user
+    graph.add( (owner, SCHEMA.name, owner_name) )
+    graph.add( (owner, SCHEMA.image, owner_avatar) )
 
 
 
