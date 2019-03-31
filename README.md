@@ -1,4 +1,4 @@
-# RDF_repo
+# GitHub Repositories in RDF Triples
 Scripts to convert to RDF the result of GitHub repo queries.
 
 ## Requirements
