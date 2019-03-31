@@ -64,7 +64,13 @@ Name of organizations, users, repositories: https://schema.org/name
 
 Avatar of users or organizations: https://schema.org/image
 
+Description of users, organizations, repositories: https://schema.org/description
+
 GitHub user: the url of the user used as IRI, type: https://wikidata.org/wiki/Q20374321
+
+GitHub contributor: the url of the user used as IRI, type: https://wikidata.org/wiki/Q20204892
+
+The property of *contributing* is mapped to: https://wikidata.org/wiki/Property:P3919
 
 The action of *stargazing* is mapped to: https://schema.org/BookmarkAction
 
