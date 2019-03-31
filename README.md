@@ -93,6 +93,8 @@ The property of being a programming languages is mapped to: https://schema.org/p
 The different kinds of programming languages, are mapped to the corrisponding Wikidata page, if available. For few of them, since the Wikidate is not available, the url of the corresponding programming language is provided. Otherwise, only the string with the name is provided.
 
 ### Still missing
+There are still some keys of the result of the query that are not covered.
+
 For users:
 "followers_url"
 "following_url"
@@ -136,4 +138,5 @@ For repositories:
 "ssh_url"
 "clone_url"
 "svn_url"
-Some of them can be solved in a similar manner of exploreStargazer (e.g. "subscribers_url"), but some others require specific property in a shared vocabulary (e.g. "branches_url")
+
+Some of them can be solved in a similar manner of `exploreStargazer` function (e.g. "subscribers_url"), but some others require specific property in a shared vocabulary (e.g. "branches_url")
