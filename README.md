@@ -34,22 +34,22 @@ You will get RDF triples in *n-triples* format (`.nt` extension).
 
 ## Functions
 
-Given a graph and a GitHub user, the function add the triples about the organizations the user belongs to:
+Given a graph and a GitHub user, the function adds the triples about the organizations the user belongs to:
 ```exploreOrganisations(graph, user)```
 
-Given a graph and a GitHub repository, the function add the triples about the StarGazers of that repository:
+Given a graph and a GitHub repository, the function adds the triples about the StarGazers of that repository:
 ```exploreStargazers(graph, repo, repository_url)```
 
-Given a graph and a GitHub repository, the function add the triples about the Contributors of that repository:
+Given a graph and a GitHub repository, the function adds the triples about the Contributors of that repository:
 ```exploreContributors(graph, repo, repository_url)```
 
-Given a graph and a GitHub repository, the function add the triples about the repository and the author of the repository:
+Given a graph and a GitHub repository, the function adds the triples about the repository and the author of the repository:
 ```addRepos(graph, repo)```
     
-Given a graph and a GitHub user, the function add the triples about the repositories created by the user, using addRepos(...) function:
+Given a graph and a GitHub user, the function adds the triples about the repositories created by the user, using addRepos(...) function:
 ```exploreRepos(graph, author)```
 
-Given the name of a Programming Language as string, it search the entity in Wikidata:
+Given the name of a Programming Language as string, it searches the entity in Wikidata:
 ```searchProgrammingLanguage(query)```
 
 ## GitHub entities already mapped in a Shared Vocabulary
