@@ -49,6 +49,6 @@ Given a graph and a GitHub repository, the function add the triples about the re
 Given a graph and a GitHub user, the function add the triples about the repositories created by the user, using addRepos(...) function:
 ```exploreRepos(graph, author)```
 
-Given the name of a Programming Language as string, it search the entity in Wikidata
+Given the name of a Programming Language as string, it search the entity in Wikidata:
 ```searchProgrammingLanguage(query)```
 
