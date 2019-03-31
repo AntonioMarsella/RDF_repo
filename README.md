@@ -101,6 +101,8 @@ For users:
 "starred_url"
 "events_url"
 "received_events_url"
+
+
 For repositories:
 "forks_url"
 "teams_url"
@@ -134,3 +136,4 @@ For repositories:
 "ssh_url"
 "clone_url"
 "svn_url"
+Some of them can be solved in a similar manner of exploreStargazer (e.g. "subscribers_url"), but some others require specific property in a shared vocabulary (e.g. "branches_url")
