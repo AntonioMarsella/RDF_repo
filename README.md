@@ -90,7 +90,7 @@ If an organization is a company, then it is mapped to: https://schema.org/Corpor
 
 The property of being a programming languages is mapped to: https://schema.org/programmingLanguage .
 
-The different kinds of programming languages, are mapped to the corrisponding Wikidata page, if available. For few of them, since the Wikidate is not available, the url of the corresponding programming language is provided. Otherwise, only the string with the name is provided.
+The different programming languages, are mapped to the corrisponding Wikidata page, if available. For few of them, since the Wikidate is not available, the url of the corresponding programming language is provided. Otherwise, only the string with the name is provided.
 
 ### Still missing
 There are still some keys of the result of the query that are not covered.
