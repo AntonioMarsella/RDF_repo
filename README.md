@@ -32,7 +32,8 @@ In the terminal, move to the folder where your files are, and run:
 
 You will get RDF triples in *n-triples* format (`.nt` extension). 
 
-##Functions
+## Functions
+
 Given a graph and a GitHub user, the function add the triples about the organizations the user belongs to:
 ```exploreOrganisations(graph, user)```
 
