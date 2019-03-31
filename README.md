@@ -138,5 +138,20 @@ For repositories:
 "ssh_url"
 "clone_url"
 "svn_url"
+"size"
+"stargazers_count"
+"watchers_count"
+"has_issues"
+"has_projects"
+"has_downloads"
+"has_wiki"
+"has_pages"
+"forks_count"
+"open_issues_count"
+"license"
+"forks"
+"open_issues"
+"watchers"
 
-Some of them can be solved in a similar manner of `exploreStargazer` function (e.g. "subscribers_url"), but some others require specific property in a shared vocabulary (e.g. "branches_url")
+
+Some of them can be solved in a similar manner of `exploreStargazer` function (e.g. "subscribers_url"), but some others require specific property in a shared vocabulary (e.g. "branches_url", "forks"): some of them, like "forks", "watchers_counts", "stargazers_count", would be very useful to mine meaningful information and to compute some statistics, that otherwise are totally inefficients.
