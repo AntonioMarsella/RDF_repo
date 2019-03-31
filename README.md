@@ -6,6 +6,7 @@ You need two python libraries: [PyGithub](https://pygithub.readthedocs.io/en/lat
 ```
 pip install PyGithub
 pip install RDFlib
+pip install requests
 ```
 
 ## Quick start
