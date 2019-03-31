@@ -52,3 +52,24 @@ Given a graph and a GitHub user, the function add the triples about the reposito
 Given the name of a Programming Language as string, it search the entity in Wikidata:
 ```searchProgrammingLanguage(query)```
 
+## GitHub entities already mapped in a Shared Vocabulary
+
+Organizations: The url of the organization used as IRI, type: https://schema.org/Organization and https://wikidata.org/wiki/Q43229
+
+To be a member of the organization: https://schema.org/memberOf and https://wikidata.org/wiki/Property:P463
+
+ID for organizations, users, repositories: https://schema.org/identifier
+
+Name of organizations, users, repositories: https://schema.org/name
+
+Avatar of users or organizations: https://schema.org/image
+
+GitHub user: the url of the user used as IRI, type: https://wikidata.org/wiki/Q20374321
+
+The action of *stargazing* is mapped to: https://schema.org/BookmarkAction
+
+The date when repositories or organizations have been created: https://schema.org/dateCreated
+
+The date when repositories or organizations have been updated on GitHub: https://schema.org/dateModified
+
+If an organization is a company, then it is mapped to: https://schema.org/Corporation
