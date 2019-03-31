@@ -31,3 +31,23 @@ In the terminal, move to the folder where your files are, and run:
 ```python ./script.py```
 
 You will get RDF triples in *n-triples* format (`.nt` extension). 
+
+##Functions
+Given a graph and a GitHub user, the function add the triples about the organizations the user belongs to:
+```exploreOrganisations(graph, user)```
+
+Given a graph and a GitHub repository, the function add the triples about the StarGazers of that repository:
+```exploreStargazers(graph, repo, repository_url)```
+
+Given a graph and a GitHub repository, the function add the triples about the Contributors of that repository:
+```exploreContributors(graph, repo, repository_url)```
+
+Given a graph and a GitHub repository, the function add the triples about the repository and the author of the repository:
+```addRepos(graph, repo)```
+    
+Given a graph and a GitHub user, the function add the triples about the repositories created by the user, using addRepos(...) function:
+```exploreRepos(graph, author)```
+
+Given the name of a Programming Language as string, it search the entity in Wikidata
+```searchProgrammingLanguage(query)```
+
