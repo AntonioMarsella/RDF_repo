@@ -1,0 +1,39 @@
+#SPARQL Query 1: Prolific amateurs group: What are the users that does not belong to organization, that have repositories with more than 3 contributors, that committed at least 2 times a week?
+
+PREFIX  schema: <https://schema.org/>
+PREFIX  git:  <https://github.com/>
+PREFIX  wd:   <https://wikidata.org/wiki>
+PREFIX  onto: <http://www.ontotext.com/>
+
+SELECT  ?user (COUNT(DISTINCT ?commit) AS ?count) (COUNT(DISTINCT ?contributors) AS ?n_contrib)
+FROM onto:disable-sameAs
+WHERE
+  { ?repo  schema:dateCreated  ?createdAt
+    BIND("2019-04-01T13:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> AS ?today)
+    BIND(( day(?today) - day(?createdAt) ) AS ?time)
+    ?user     schema:author         ?repo .
+    ?commit   wd:Q20058545          ?repo .
+    ?contributor  a                 schema:Contributor ;
+              schema:Contributor    ?repo .
+    ?organization
+              a                     schema:Organization
+    FILTER ( ! EXISTS { ?user  schema:memberOf  ?organization } )
+    FILTER ( ( ?n_contrib > 3 ) && ( ( ( ?count * 7 ) / ?time ) > 2 ) )
+  }
+GROUP BY ?user
+
+#SPARQL Query 2: Users that collaborate often together: the developers contributing to repositories of other users that have contributed to their repositories
+
+PREFIX  schema: <https://schema.org/>
+PREFIX  git:  <https://github.com/>
+PREFIX  onto: <http://www.ontotext.com/>
+  
+SELECT  ?repo ?author ?st ?repo_st ?found
+FROM onto:disable-sameAs
+WHERE
+    { ?found  schema:author       ?repo .
+      ?st     schema:contributor  ?repo .
+      ?st     schema:author       ?repo_st .
+      ?found  schema:contributor  ?repo_st .
+      FILTER ( ! EXISTS { ?found  schema:authod  ?repo_st . } )
+    }
