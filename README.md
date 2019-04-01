@@ -32,6 +32,10 @@ In the terminal, move to the folder where your files are, and run:
 
 You will get RDF triples in *n-triples* format (`.nt` extension). 
 
+## Quick start GraphDB Visualization Demo
+
+To visualize in GraphDB, import the file `example.nt` into GraphDB, with https://github.com/ as *Base IRI*. After that click on `Explore --> Visual Graph` and paste https://github.com/SuriyaaKudoIsc in the `Easy Graph` section.
+
 ## Functions
 
 Given a graph and a GitHub user, the function adds the triples about the organizations the user belongs to:
