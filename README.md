@@ -34,7 +34,10 @@ You will get RDF triples in *n-triples* format (`.nt` extension).
 
 ## Quick start GraphDB Visualization Demo
 
-To visualize in GraphDB, import the file `example.nt` into GraphDB, with https://github.com/ as *Base IRI*. After that click on `Explore --> Visual Graph` and paste https://github.com/SuriyaaKudoIsc in the `Easy Graph` section.
+To visualize in GraphDB, import the file `example.nt` into GraphDB, with https://github.com/ as *Base IRI*. 
+After that, click on `Explore --> Visual Graph` and paste https://github.com/SuriyaaKudoIsc in the `Easy Graph` section.
+
+If you want just to see a preview of how it looks like, go to https://youtu.be/jkSxgrQbo-U.
 
 ## Functions
 
