@@ -2,7 +2,7 @@
 Scripts to convert to RDF the result of GitHub repo queries.
 
 ## Requirements
-You need two python libraries: [PyGithub](https://pygithub.readthedocs.io/en/latest/introduction.html) and [RDFlib](https://rdflib.readthedocs.io/en/stable/). If you have `pip` installed, then run in the terminal
+You need three python libraries: [PyGithub](https://pygithub.readthedocs.io/en/latest/introduction.html), [RDFlib](https://rdflib.readthedocs.io/en/stable/) and [Requests](http://docs.python-requests.org/en/master/). If you have `pip` installed, then run in the terminal
 ```
 pip install PyGithub
 pip install RDFlib
